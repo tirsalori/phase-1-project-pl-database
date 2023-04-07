@@ -46,3 +46,16 @@ input[type=submit] {
     border-radius: 25px
 }
 
+input[type=text], input[type=number] {
+    border: none;
+    margin-bottom: 10px;
+    color: #bfc0c0;
+    background: white;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 5px rgb(249, 247, 247), inset -5px -5px 5px rgb(249, 247, 247);
+    outline: none;
+}
+    
+
