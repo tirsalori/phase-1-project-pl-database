@@ -29,6 +29,26 @@
       "deadlift": "212.5",
       "total": "515",
       "weightClass": "60"
+    },
+    {
+      "id": 4,
+      "firstName": "Bobb",
+      "lastName": "Matthews",
+      "squat": "347.5",
+      "bench": "232.5",
+      "deadlift": "380",
+      "total": "952.5",
+      "weightClass": "100"
+    },
+    {
+      "id": 5,
+      "firstName": "Jolene",
+      "lastName": "Domingo",
+      "squat": "107.5",
+      "bench": "57.5",
+      "deadlift": "142.5",
+      "total": "307.5",
+      "weightClass": "52"
     }
   ]
 }
