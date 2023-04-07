@@ -19,6 +19,16 @@
       "deadlift": "205",
       "total": "482.5",
       "weightClass": "75"
+    },
+    {
+      "id": 3,
+      "firstName": "Celine",
+      "lastName": "Crum",
+      "squat": "187.5",
+      "bench": "115",
+      "deadlift": "212.5",
+      "total": "515",
+      "weightClass": "60"
     }
   ]
 }

@@ -20,25 +20,29 @@
                     <input type="text" id="lastName" placeholder="Enter Last Name" required>
 
                     <label for="squat">Best Squat</label>
-                    <input type="number" id="squat" placeholder="Enter Squat in Kilos" min="0">
+                    <input type="number" id="squat" placeholder="Enter Squat in Kilograms" min="0">
 
                     <label for="bench">Best Bench</label>
-                    <input type="number" id="bench" placeholder="Enter Bench in Kilos" min="0">
+                    <input type="number" id="bench" placeholder="Enter Bench in Kilograms" min="0">
 
                     <label for="deadlift">Best Deadlift</label>
-                    <input type="number" id="deadlift" placeholder="Enter Deadlift in Kilos" min="0">
+                    <input type="number" id="deadlift" placeholder="Enter Deadlift in Kilograms" min="0">
 
                     <label for="total">Best Total</label>
-                    <input type="number" id="total" placeholder="Enter Total in Kilos" min="0">
+                    <input type="number" id="total" placeholder="Enter Total in Kilograms" min="0">
 
                     <label for="weightClass">Weight Class</label>
-                    <input type="number" id="weightClass" placeholder="Enter Weight Class in Kilos" min="0">
+                    <input type="number" id="weightClass" placeholder="Enter Weight Class in Kilograms" min="0">
 
                     <input type="submit">
                 </form>
             </section>
+            <section id="stats" style="padding:2em 0 2em 0">
+                <label for="stats">Filter By Weight Class:</label>
+                <select id="weightClass-dropdown" name="weightClass"></select>
+            </section>
             <section id="lifters">
-                <table id="table">
+                <table id="table" class="test">
                     <thead>
                         <th>ID</th>
                         <th>First Name</th>

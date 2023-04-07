@@ -1,4 +1,9 @@
 form * {
     display: block;
+    width: 26%;
+    margin: 1em
+}
+
+select * {
     margin: 1em
 }

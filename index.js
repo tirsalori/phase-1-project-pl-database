@@ -2,6 +2,7 @@
 //fetch lifters to DOM
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("form").addEventListener("submit", addLifter)
+    document.getElementById("weightClass-dropdown").addEventListener('change', filterWeighClass)
     fetch("http://localhost:3000/lifters")
         .then((response) => response.json())
         .then((data) => {
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 )
 
-//function to add additional lifters
+//function to collect new lifter stats
 function addLifter(e) {
     e.preventDefault()
     fetch("http://localhost:3000/lifters",{
@@ -36,8 +37,11 @@ function addLifter(e) {
         .then((data) => {addLifterStats(data)})
 }
 
+//function to add lifter stats to table
 function addLifterStats(data) {
     const table = document.querySelector("tbody")
+    const wcDropdown = document.getElementById("weightClass-dropdown")
+    const wcOption = document.createElement("option")
     let row = table.insertRow()
     let idCell = row.insertCell(0)
     let firstNameCell = row.insertCell(1)
@@ -55,4 +59,22 @@ function addLifterStats(data) {
     deadliftCell.innerText = data["deadlift"]
     totalCell.innerText = data["total"]
     weightClassCell.innerText = data["weightClass"]
+
+    options = document.getElementsByTagName("option")
+    for (let i = 0; i < options.length; i++) {
+        if (options[i] !== data["weightClass"]){
+            wcOption.innerText = data["weightClass"]
+        }
+    }
+    wcDropdown.appendChild(wcOption)
+}
+
+//function to filter by weight class
+function filterWeighClass(e) {
+    tableRows = document.getElementById("table").rows
+    for (let i = 1; i < tableRows.length; i++){
+        if (e.target.value !== tableRows[i].cells[7].innerText) {
+            tableRows[i].style.display = "none"
+        }
+    }
 }
