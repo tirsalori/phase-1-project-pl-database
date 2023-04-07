@@ -43,15 +43,13 @@ function addLifterStats(data) {
     const weightClassDropdown = document.getElementById("weightClass-dropdown")
     const weightClassOption = document.createElement("option")
     let row = table.insertRow()
-    let idCell = row.insertCell(0)
-    let firstNameCell = row.insertCell(1)
-    let lastNameCell = row.insertCell(2)
-    let squatCell = row.insertCell(3)
-    let benchCell = row.insertCell(4)
-    let deadliftCell = row.insertCell(5)
-    let totalCell = row.insertCell(6)
-    let weightClassCell = row.insertCell(7)
-    idCell.innerText = data["id"]
+    let firstNameCell = row.insertCell(0)
+    let lastNameCell = row.insertCell(1)
+    let squatCell = row.insertCell(2)
+    let benchCell = row.insertCell(3)
+    let deadliftCell = row.insertCell(4)
+    let totalCell = row.insertCell(5)
+    let weightClassCell = row.insertCell(6)
     firstNameCell.innerText = data["firstName"]
     lastNameCell.innerText = data["lastName"]
     squatCell.innerText = data["squat"]
@@ -73,7 +71,7 @@ function addLifterStats(data) {
 function filterWeighClass(e) {
     tableRows = document.getElementById("table").rows
     for (let i = 1; i < tableRows.length; i++){
-        if (e.target.value !== tableRows[i].cells[7].innerText) {
+        if (e.target.value !== tableRows[i].cells[6].innerText) {
             tableRows[i].style.display = "none"
         }
     }
