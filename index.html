@@ -10,8 +10,27 @@
             <h1>Powerlifting Database</h1>
         </header>
         <main>
+            <section id="stats" style="padding:1em 0 1em 0">
+                <label for="stats">Filter By Weight Class:</label>
+                <select id="weightClass-dropdown" name="weightClass"></select>
+            </section>
+            <section id="lifters">
+                <table id="table">
+                    <thead>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th id="squatHead">Squat</th>
+                        <th id="benchHead">Bench</th>
+                        <th id="deadliftHead">Deadlift</th>
+                        <th id="totalHead">Total</th>
+                        <th id="weightClassHead">Weight Class</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
             <section id="form">
-                <p>Lifter not included below? Add a lifter!</p>
+                <p style="padding:1em 0 1em 0">Lifter not included above? Add a lifter!</p>
                 <form>
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" placeholder="Enter First Name" required>
@@ -36,26 +55,6 @@
 
                     <input type="submit">
                 </form>
-            </section>
-            <section id="stats" style="padding:2em 0 2em 0">
-                <label for="stats">Filter By Weight Class:</label>
-                <select id="weightClass-dropdown" name="weightClass"></select>
-            </section>
-            <section id="lifters">
-                <table id="table">
-                    <thead>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th id="squatHead">Squat</th>
-                        <th id="benchHead">Bench</th>
-                        <th id="deadliftHead">Deadlift</th>
-                        <th id="totalHead">Total</th>
-                        <th id="weightClassHead">Weight Class</th>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </section>
             </section>
         </main>
         <script type="text/javascript" src="index.js"></script>
