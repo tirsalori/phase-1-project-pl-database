@@ -25,3 +25,5 @@ th {
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+tr:hover {background-color: #ddd;}
