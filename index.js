@@ -1,17 +1,58 @@
-//add lifters to DOM
+
+//fetch lifters to DOM
 document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("form").addEventListener("submit", addLifter)
     fetch("http://localhost:3000/lifters")
         .then((response) => response.json())
         .then((data) => {
-            const table = document.querySelector("tbody")
+            //const table = document.querySelector("tbody")
             for (let lifter of data) {
-                let row = table.insertRow()
-                for (key in lifter) {
-                    let cell = row.insertCell()
-                    let text = document.createTextNode(lifter[key])
-                    cell.appendChild(text)
-                }
+                addLifterStats(lifter)
             }
-        }
-        )
-})
+        }) 
+    }
+)
+
+//function to add additional lifters
+function addLifter(e) {
+    e.preventDefault()
+    fetch("http://localhost:3000/lifters",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({
+            "firstName": e.target[0]["value"],
+            "lastName": e.target[1]["value"],
+            "squat": e.target[2]["value"],
+            "bench": e.target[3]["value"],
+            "deadlift": e.target[4]["value"],
+            "total": e.target[5]["value"],
+            "weightClass": e.target[6]["value"]
+        })
+    })
+        .then((response) => response.json())
+        .then((data) => {addLifterStats(data)})
+}
+
+function addLifterStats(data) {
+    const table = document.querySelector("tbody")
+    let row = table.insertRow()
+    let idCell = row.insertCell(0)
+    let firstNameCell = row.insertCell(1)
+    let lastNameCell = row.insertCell(2)
+    let squatCell = row.insertCell(3)
+    let benchCell = row.insertCell(4)
+    let deadliftCell = row.insertCell(5)
+    let totalCell = row.insertCell(6)
+    let weightClassCell = row.insertCell(7)
+    idCell.innerText = data["id"]
+    firstNameCell.innerText = data["firstName"]
+    lastNameCell.innerText = data["lastName"]
+    squatCell.innerText = data["squat"]
+    benchCell.innerText = data["bench"]
+    deadliftCell.innerText = data["deadlift"]
+    totalCell.innerText = data["total"]
+    weightClassCell.innerText = data["weightClass"]
+}

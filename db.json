@@ -1,24 +1,24 @@
 {
-    "lifters": [
-        {
-            "id": 1,
-            "firstName": "Tirsa",
-            "lastName": "St. Fort",
-            "squat": "150",
-            "bench": "97.5",
-            "deadlift": "172.5",
-            "total": "420",
-            "weightClass": "60"
-        },
-        {
-            "id": 2,
-            "firstName": "Kris",
-            "lastName": "Sullivan",
-            "squat": "165",
-            "bench": "112.5",
-            "deadlift": "205",
-            "total": "482.5",
-            "weightClass": "75"
-        }
-    ]
+  "lifters": [
+    {
+      "id": 1,
+      "firstName": "Tirsa",
+      "lastName": "St. Fort",
+      "squat": "150",
+      "bench": "97.5",
+      "deadlift": "172.5",
+      "total": "420",
+      "weightClass": "60"
+    },
+    {
+      "id": 2,
+      "firstName": "Kris",
+      "lastName": "Sullivan",
+      "squat": "165",
+      "bench": "112.5",
+      "deadlift": "205",
+      "total": "482.5",
+      "weightClass": "75"
+    }
+  ]
 }
