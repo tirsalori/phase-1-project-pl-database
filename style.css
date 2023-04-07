@@ -16,3 +16,8 @@ td, th {
     border: 1px solid #ddd;
     padding: 8px
   }
+
+th {
+    background-color: #513191;
+    color: white
+}
