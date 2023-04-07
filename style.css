@@ -27,3 +27,8 @@ th {
 }
 
 tr:hover {background-color: #ddd;}
+
+h1 {
+    color: black;
+    text-shadow: 1px 1px 2px #513191;
+  }
