@@ -43,7 +43,7 @@ input[type=submit] {
     color: white;
     border:0 none;
     cursor:pointer;
-    border-radius: 25px
+    border-radius: 10px
 }
 
 input[type=text], input[type=number] {
