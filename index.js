@@ -75,9 +75,11 @@ function addLifterStats(data) {
 
 //function to filter by weight class
 function filterWeighClass(e) {
-    tableRows = document.getElementById("table").rows
+    let tableRows = document.getElementById("table").rows
     for (let i = 1; i < tableRows.length; i++){
-        if (e.target.value !== tableRows[i].cells[6].innerText) {
+        if (e.target.value === tableRows[i].cells[6].innerText || e.target.value === "") {
+            tableRows[i].style.display = ""
+        } else {
             tableRows[i].style.display = "none"
         }
     }
