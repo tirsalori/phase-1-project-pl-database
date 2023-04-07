@@ -90,8 +90,8 @@ function sortStats(e) {
         for(let i = 1; i < (rows.length-1); i++) {
             if (Number(rows[i].getElementsByTagName("td")[e.target.cellIndex].innerText) < Number(rows[i+1].getElementsByTagName("td")[e.target.cellIndex].innerText)) {
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i])
+                switching = true
             }
-        
         }
     }
 }
