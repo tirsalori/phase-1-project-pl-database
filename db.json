@@ -49,16 +49,6 @@
       "deadlift": "142.5",
       "total": "307.5",
       "weightClass": "52"
-    },
-    {
-      "firstName": "Sam",
-      "lastName": "Smith",
-      "squat": "",
-      "bench": "0",
-      "deadlift": "0",
-      "total": "0",
-      "weightClass": "0",
-      "id": 6
     }
   ]
 }
