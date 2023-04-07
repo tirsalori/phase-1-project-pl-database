@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("form").addEventListener("submit", addLifter)
     document.getElementById("weightClass-dropdown").addEventListener('change', filterWeighClass)
+    document.get
     fetch("http://localhost:3000/lifters")
         .then((response) => response.json())
         .then((data) => {
@@ -78,3 +79,4 @@ function filterWeighClass(e) {
         }
     }
 }
+
