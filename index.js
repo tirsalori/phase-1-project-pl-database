@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("form").addEventListener("submit", addLifter)
     document.getElementById("weightClass-dropdown").addEventListener('change', filterWeighClass)
-    document.get
+    Array.from(document.querySelectorAll("th#squatHead, th#benchHead, th#deadliftHead, th#totalHead, th#weightClassHead")).forEach(element => element.addEventListener("click", sortStats))
     fetch("http://localhost:3000/lifters")
         .then((response) => response.json())
         .then((data) => {
@@ -41,8 +41,8 @@ function addLifter(e) {
 //function to add lifter stats to table
 function addLifterStats(data) {
     const table = document.querySelector("tbody")
-    const wcDropdown = document.getElementById("weightClass-dropdown")
-    const wcOption = document.createElement("option")
+    const weightClassDropdown = document.getElementById("weightClass-dropdown")
+    const weightClassOption = document.createElement("option")
     let row = table.insertRow()
     let idCell = row.insertCell(0)
     let firstNameCell = row.insertCell(1)
@@ -64,10 +64,10 @@ function addLifterStats(data) {
     options = document.getElementsByTagName("option")
     for (let i = 0; i < options.length; i++) {
         if (options[i] !== data["weightClass"]){
-            wcOption.innerText = data["weightClass"]
+            weightClassOption.innerText = data["weightClass"]
         }
     }
-    wcDropdown.appendChild(wcOption)
+    weightClassDropdown.appendChild(weightClassOption)
 }
 
 //function to filter by weight class
@@ -80,3 +80,19 @@ function filterWeighClass(e) {
     }
 }
 
+//function to sort by stats
+function sortStats(e) {
+    console.log(e)
+
+    // const table = document.getElementById("table")
+    // let switching = true
+    // let shouldSwitch
+    // while (switching) {
+    //     switching = false
+    //     const rows = table.rows
+    //     for(let i = 1; i < (rows.length-1), i++) {
+    //         shouldSwitch = false
+    //         console.log(rows[i])
+    //     }
+    // }
+}
