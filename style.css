@@ -57,5 +57,9 @@ input[type=text], input[type=number] {
     box-shadow: inset 5px 5px 5px rgb(249, 247, 247), inset -5px -5px 5px rgb(249, 247, 247);
     outline: none;
 }
+
+#squatHead, #benchHead, #deadliftHead, #totalHead, #weightClassHead {
+    text-decoration: underline;
+}
     
 

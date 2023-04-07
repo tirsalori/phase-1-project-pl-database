@@ -58,6 +58,12 @@ function addLifterStats(data) {
     totalCell.innerText = data["total"]
     weightClassCell.innerText = data["weightClass"]
 
+    optionsarray = []
+
+
+
+
+
     options = document.getElementsByTagName("option")
     for (let i = 0; i < options.length; i++) {
         if (options[i] !== data["weightClass"]){
