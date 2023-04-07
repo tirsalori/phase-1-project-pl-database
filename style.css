@@ -1,7 +1,7 @@
 form * {
     display: block;
     width: 30%;
-    margin: 1em
+    margin: 1em;
 }
 
 select * {
@@ -36,3 +36,13 @@ h1 {
 table {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#513191; 
+    color: white;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 25px
+}
+
