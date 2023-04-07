@@ -1,9 +1,13 @@
 form * {
     display: block;
-    width: 26%;
+    width: 30%;
     margin: 1em
 }
 
 select * {
     margin: 1em
 }
+
+tr:nth-child(even) {
+    background-color: #E6E6FA
+  }
