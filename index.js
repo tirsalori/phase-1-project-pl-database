@@ -35,6 +35,12 @@ function addLifter(e) {
     })
         .then((response) => response.json())
         .then((data) => {addLifterStats(data)})
+    let tableRows = document.getElementById("table").rows
+    for (let i = 1; i < tableRows.length; i++){
+        if (tableRows[i].style.display = "none") {
+            tableRows[i].style.display = ""
+        }
+    }
 }
 
 //function to add lifter stats to table
